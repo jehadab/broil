@@ -150,13 +150,25 @@
     top: -20%;
     left: -225px;
 }
+
+.branch-text-container {
+    max-width: 561px;
+
+}
 .branch-title{
     font-family: var(--unnamed-font-family-montserrat-black), sans-serif;
+    font-size: 100px;
+    color: var(--unnamed-color-f77319);
+}
+.branch-title > span{
+    font-family: var(--unnamed-color-f77319), sans-serif;
     font-size: 140px;
+    color: var(--color-light);
 }
 .branch-description {
     font-family: var(--unnamed-font-family-montserrat-medium), sans-serif;
     font-size: 32px;
+    color: var(--color-light);
 }
 
 /* Top Selling Images */

@@ -14,20 +14,22 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand logo-brand" href="{{ route('home') }}">
-                <img src="{{ asset("images/logo.png") }}" alt="Broil Logo" class="logo-image">
-            </a>
+            <!-- Logo Centered -->
+            <div class="d-flex justify-content-center align-items-center order-md-1 order-1 position-absolute">
+                <a class="navbar-brand logo-brand mx-auto mx-md-0" href="{{ route('home') }}">
+                    <img src="{{ asset('images/logo.png') }}" alt="Broil Logo" class="logo-image">
+                </a>
+            </div>
 
             <!-- Hamburger menu for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Collapsible Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+            <!-- Collapsible Navigation Menu Centered -->
+            <div class="collapse navbar-collapse order-md-2 order-3" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
                             HOME
@@ -45,11 +47,6 @@
                     </li>
                 </ul>
             </div>
-
-            <!-- Home Icon (moved to the left) -->
-{{--            <a href="{{ route('home') }}" class=" home-icon me-2">--}}
-{{--                <img src="{{ asset('images/icons/home.svg') }}" alt="Home">--}}
-{{--            </a>--}}
         </div>
     </nav>
 
@@ -59,55 +56,54 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column -->
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="d-flex align-items-center mb-3">
-                        <h2 class="fw-bold mb-0">BRCiIL</h2>
-                    </div>
-                    <div class="mb-3">
-                        <p class="mb-1">Call us: +963 11 5122 333</p>
-                        <p class="mb-1">broilsyria@gmail.com</p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-
-                <!-- Middle Column -->
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5 class="mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Who we are</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact us</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Visit us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-md-4">
-                    <h5 class="mb-3">Visit Us</h5>
-                    <address class="mb-4">
-                        Damascus / Syria<br>
-                        Al Shaalan st,<br>
-                        Qassion Mall
-                    </address>
-                    <div class="mb-4">
-                        <a href="#top" class="btn btn-outline-light">BACK TO THE TOP</a>
-                    </div>
+    <footer class="bg-black py-4">
+        <div class="d-flex flex-row ">
+            <div class="col-3  d-flex justify-content-center align-items-center ">
+                <div class="text-center">
+                    <p>
+                        <img src="{{ asset('images/logo-down.png') }}" alt="Broil Logo" class="img-fluid">
+                    </p>
+                    <p class="footer-broil-text mb-1">
+                        Call us: <a href="tel:+963115122333" class="text-white text-decoration-none">+963 11 5122 333</a>
+                    </p>
+                    <p class="footer-broil-text">broilsyria@gmail.com</p>
                 </div>
             </div>
+            <div class="col-4 offset-1">
+                <img class="back-to-top-icon" src="{{asset('images/back-to-top.svg')}}" alt="">
+                <div class="d-flex flex-row justify-content-center">
+                    <a class="back-to-top" style="text-decoration: none!important;">BACK TO THE TOP</a>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <p class="footer-broil-text" style="font-size: 20px">Home</p>
+                    <p class="footer-broil-text" style="font-size: 20px; margin-left: 40px">Our Menu</p>
+                    <p class="footer-broil-text" style="font-size: 20px">Contact Us</p>
+                </div>
 
-            <!-- Copyright Section -->
-            <div class="row mt-4 pt-3 border-top">
-                <div class="col-12 text-center">
-                    <p class="mb-0">Powered by <a href="#" class="text-white">Chroma CCS</a></p>
+                <div class="d-flex flex-row justify-content-between">
+                    <p class="bold-footer-text">Instagram</p>
+                    <img src="{{ asset('images/Star.png') }}" alt="">
+                    <p class="bold-footer-text">Facebook</p>
+                </div>
+
+                <div class="text-center">
+                    <a>
+                        <img src="{{ asset('images/p-chroma.png') }}" alt="">
+                    </a>
                 </div>
             </div>
+            <div class="col-3 container-fluid d-flex justify-content-center align-items-center offset-1 ">
+                <div class="text-center">
+
+                    <p class="bold-footer-text">Visit us</p>
+                    <p class="footer-broil-text">Damascus / Syria </p>
+                    <p class="footer-broil-text"> Al Shaalan st </p>
+                    <p class="footer-broil-text"> Qassion Mall </p>
+                </div>
+
+            </div>
+                <!-- Left Column - Brand & Contact -->
+
         </div>
     </footer>
 </body>

@@ -94,8 +94,11 @@
                     <div class="broil-background">
                         <img src="{{ asset('images/home/broil-text.png') }}" class="broil-background-text" alt="">
 
-                    <h2>SINCE<span>1973</span></h2>
-                    <p>WE ARE DELIVERING FOOD FOR MORE THAN 50 YEARS OUR BRANCHES ARE FROM THE FIRST WHO INTRODUCED FAST FOOD TO SYRIA.</p>
+                        <div class="flex-row branch-text-container ">
+
+                    <h2 class="branch-title">SINCE<br><span>1973</span></h2>
+                    <p class="branch-description">WE ARE DELIVERING FOOD FOR MORE THAN 50 YEARS OUR BRANCHES ARE FROM THE FIRST WHO INTRODUCED FAST FOOD TO SYRIA.</p>
+                        </div>
                     </div>
                 </div>
 {{--            </div>--}}
@@ -150,10 +153,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
 
             </div>

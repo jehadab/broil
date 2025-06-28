@@ -35,6 +35,16 @@ html, body {
   /*background: #0C0D0E 0% 0% no-repeat padding-box;*/
   /*border: 1px solid #F47421;*/
   opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Classes for navbar scroll behavior */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transform: translateY(0);
 }
 
 .navbar-brand.logo-brand {
@@ -62,7 +72,7 @@ html, body {
 
 .navbar-nav .nav-link {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;
-    color: var(--unnamed-color-ffffff);
+    color: var(--unnamed-color-707070);
     text-align: left;
     /*font: normal normal normal 20px/26px Montserrat;*/
     letter-spacing: 0px;
@@ -117,6 +127,54 @@ html, body {
 /* 4. Content Sections */
 
 /* 5. Layout Components */
+
+
+.footer-broil-text{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px Montserrat;
+    color: var(--unnamed-color-707070);
+    text-align: left;
+    /*font: normal normal normal 15px/90px Montserrat;*/
+    /*letter-spacing: 0.41px;*/
+    /*color: #FFFFFF;*/
+    opacity: 1;
+}
+.back-to-top{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/90px Montserrat;
+    color: var(--unnamed-color-f77319);
+    text-align: left;
+    text-decoration: none;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+    /*font: normal normal normal 15px/90px Montserrat;*/
+    letter-spacing: 0.41px;
+    /*color: #FFFFFF;*/
+    /*text-transform: uppercase;*/
+    /*opacity: 1;*/
+    border-bottom: none !important;
+}
+.back-to-top:hover,
+.back-to-top:focus{
+    /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/90px Montserrat;*/
+    /*color: var(--unnamed-color-f77319);*/
+    color: var(--color-light);
+    text-align: left;
+    text-decoration: none;
+    border-bottom: none !important;
+    /*font: normal normal normal 15px/90px Montserrat;*/
+    letter-spacing: 0.41px;
+    /*color: #FFFFFF;*/
+    /*text-transform: uppercase;*/
+    opacity: 1;
+}
+.back-to-top-icon{
+    position: relative;
+    top: -70px;
+    left: 44%;
+    /*right: -100px;*/
+
+
+}
 
 /* 6. Responsive Breakpoints */
 @media (max-width: 767px) {
@@ -280,4 +338,35 @@ html {
 
 .btn {
   transition: all 0.3s ease !important;
+}
+
+footer {
+    font-family: 'Arial', sans-serif;
+}
+
+footer a {
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #bbb !important;
+}
+
+.social-icons i {
+    margin-right: 5px;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.bold-footer-text{
+    font: var(--unnamed-font-style-normal) normal bold 25px Montserrat;
+    letter-spacing: var(--unnamed-character-spacing-0-68);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    /*font: normal normal bold 25px/112px Montserrat;*/
+    /*letter-spacing: 0.68px;*/
+    /*color: #FFFFFF;*/
+    opacity: 1;
 }
