@@ -1,0 +1,283 @@
+/* 1. Global Reset & Variables */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #F47421; /* example orange */
+  --color-dark: #111;
+  --color-dark2: #0C0D0E;
+  --color-light: #fff;
+  --color-gray: #707070;
+  --gap: 1rem;
+  --max-width: 1200px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* 2. Bootstrap Overrides */
+.navbar {
+  padding: 0.5rem 0;
+  background-color: var(--color-dark2);
+  min-height: 63px;
+  /* UI Properties */
+  /*background: #0C0D0E 0% 0% no-repeat padding-box;*/
+  /*border: 1px solid #F47421;*/
+  opacity: 1;
+}
+
+.navbar-brand.logo-brand {
+  position: relative;
+  /*left: -140px;*/
+  margin-right: 0;
+  padding: 0;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  max-width: 200px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    /*font: normal normal normal 20px/26px Montserrat;*/
+    letter-spacing: 0px;
+    /*color: #FFFFFF;*/
+    opacity: 1;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;*/
+    text-align: left;
+    font: normal normal normal 20px/26px Montserrat;
+    letter-spacing: 0px;
+    color: #F47421;
+    opacity: 1;
+}
+
+
+/* Navbar toggler styling */
+.navbar-toggler {
+  /*border-color: var(--color-primary);*/
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem var(--color-primary);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28244, 116, 33, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.home-icon {
+    /*right: 200px;*/
+  margin-left: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.home-icon:hover {
+  color: var(--color-light) !important;
+}
+
+/* 3. Main Content */
+.main-content {
+  margin-top: 50px; /* Account for fixed navbar */
+  min-height: calc(100vh - 76px - 100px); /* Viewport height minus navbar and footer */
+}
+
+/* 4. Content Sections */
+
+/* 5. Layout Components */
+
+/* 6. Responsive Breakpoints */
+@media (max-width: 767px) {
+  .navbar-brand.logo-brand {
+    left: 0;
+    margin-left: 1rem;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  .navbar-nav {
+    gap: 0;
+    align-items: flex-start;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(244, 116, 33, 0.2);
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    display: block;
+  }
+
+  .navbar-nav .nav-link::after {
+    bottom: 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-collapse {
+    background-color: var(--color-dark2);
+    border-top: 1px solid var(--color-primary);
+    margin-top: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar-brand.logo-brand {
+    left: -100px;
+  }
+
+  .logo-image {
+    height: 45px;
+  }
+
+  .navbar-nav {
+    gap: 1.5rem;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+footer a:hover {
+    color: #ccc !important;
+    text-decoration: underline !important;
+}
+
+.social-icons i {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover i {
+    transform: translateY(-3px);
+}
+
+@media (min-width: 1024px) {
+  .navbar-brand.logo-brand {
+    left: 50px;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+/* 7. Additional Responsive Utilities */
+@media (max-width: 480px) {
+  .navbar-brand.logo-brand {
+    left: 0;
+    margin-left: 0.5rem;
+  }
+
+  .logo-image {
+    height: 35px;
+  }
+
+  .navbar-nav {
+    gap: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .home-icon {
+    font-size: 1.1rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.2rem 0.4rem;
+    margin-right: 0.5rem;
+  }
+
+  .container-fluid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* 8. Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 9. Focus States for Accessibility */
+.navbar-nav .nav-link:focus {
+  outline: none;
+  color: var(--color-primary);
+}
+
+/* 10. Button Hover Effects */
+.btn-primary:hover {
+  background-color: #ea580c !important;
+  border-color: #ea580c !important;
+  transform: translateY(-2px);
+}
+
+.btn-dark:hover {
+  background-color: #374151 !important;
+  border-color: #374151 !important;
+  transform: translateY(-2px);
+}
+
+.btn {
+  transition: all 0.3s ease !important;
+}

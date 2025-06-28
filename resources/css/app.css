@@ -1,0 +1,130 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './main-layout.css';
+@import './home.css';
+@import './about.css';
+@import './menu.css';
+
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Erica One';
+    src: url('../fonts/Erica_One/EricaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom CSS Variables */
+:root {
+    /* Colors: */
+    --unnamed-color-707070: #707070;
+    --unnamed-color-f77319: #F77319;
+    --unnamed-color-ffffff: #FFFFFF;
+
+    /* Font/text values */
+    --unnamed-font-family-montserrat-black: Montserrat-Black;
+    --unnamed-font-family-montserrat-medium: Montserrat-Medium;
+    --unnamed-font-family-montserrat-bold: Montserrat-Bold;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-75-7367172241211: 75.7367172241211px;
+    --unnamed-font-size-25-351360321044922: 25.351360321044922px;
+    --unnamed-character-spacing-2-04: 2.04px;
+    --unnamed-character-spacing-0-68: 0.68px;
+    --unnamed-line-spacing-101-36845397949219: 101.36845397949219px;
+    --unnamed-line-spacing-29-57658576965332: 29.57658576965332px;
+    --unnamed-font-family-erica-one: Erica One;
+    --unnamed-font-family-montserrat-light: Montserrat-Light;
+    --unnamed-font-family-montserrat-extra-bold: Montserrat-ExtraBold;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+    font-family: var(--unnamed-font-family-montserrat-bold);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-25-351360321044922);
+    line-height: var(--unnamed-line-spacing-29-57658576965332);
+    letter-spacing: var(--unnamed-character-spacing-0-68);
+    color: var(--unnamed-color-ffffff);
+}
+
+.unnamed-character-style-2 {
+    font-family: var(--unnamed-font-family-montserrat-medium);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-25-351360321044922);
+    line-height: var(--unnamed-line-spacing-29-57658576965332);
+    letter-spacing: var(--unnamed-character-spacing-0-68);
+    color: var(--unnamed-color-ffffff);
+}
+
+.unnamed-character-style-3 {
+    font-family: var(--unnamed-font-family-montserrat-black);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-75-7367172241211);
+    line-height: var(--unnamed-line-spacing-101-36845397949219);
+    letter-spacing: var(--unnamed-character-spacing-2-04);
+    color: var(--unnamed-color-ffffff);
+}
+
+/*.row > * {*/
+/*    flex-shrink: 0;*/
+/*    width: 100%;*/
+/*    max-width: 100%;*/
+/*    padding-right:0;*/
+/*    padding-left: 0;*/
+/*    margin-top: var(--bs-gutter-y);*/
+/*}*/
+
+/* home page */
