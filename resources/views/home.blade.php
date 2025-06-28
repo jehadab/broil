@@ -88,20 +88,17 @@
 
     <!-- About Preview Section -->
     <section class="bg-orange">
-{{--        <div class="container-fluid">--}}
-            <div class="flex-row justify-content-center">
-                <div class="col-12">
-                    <div class="broil-background">
-                        <img src="{{ asset('images/home/broil-text.png') }}" class="broil-background-text" alt="">
+        <div class="row">
+            <div class="col-12">
+                <div class="broil-background position-relative">
+                    <img src="{{ asset('images/home/broil-text.png') }}" class="broil-background-text" alt="">
 
-                        <div class="flex-row branch-text-container ">
-
-                    <h2 class="branch-title">SINCE<br><span>1973</span></h2>
-                    <p class="branch-description">WE ARE DELIVERING FOOD FOR MORE THAN 50 YEARS OUR BRANCHES ARE FROM THE FIRST WHO INTRODUCED FAST FOOD TO SYRIA.</p>
-                        </div>
+                    <div class="branch-text-container position-absolute bottom-0 start-0 p-4">
+                        <h2 class="branch-title">SINCE<br><span>1973</span></h2>
+                        <p class="branch-description">WE ARE DELIVERING FOOD FOR MORE THAN 50 YEARS OUR BRANCHES ARE FROM THE FIRST WHO INTRODUCED FAST FOOD TO SYRIA.</p>
                     </div>
                 </div>
-{{--            </div>--}}
+            </div>
         </div>
     </section>
 
