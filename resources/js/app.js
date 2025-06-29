@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             interval: 3000,
             wrap: true,
             keyboard: true,
-            pause: 'hover'
+            pause: 'hover',
+            touch: true // Enable touch/swipe on mobile
         });
     });
     console.log("hto")
@@ -46,4 +47,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         lastScrollTop = scrollTop;
     });
+
+    // Back to top functionality
+    const backToTopButton = document.querySelector('.back-to-top');
+    const backToTopContainer = document.querySelector('.back-to-top').parentElement;
+    
+    if (backToTopButton) {
+        // Initially hide the button
+        backToTopContainer.style.opacity = '0';
+        backToTopContainer.style.pointerEvents = 'none';
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300) {
+                backToTopContainer.style.opacity = '1';
+                backToTopContainer.style.pointerEvents = 'auto';
+            } else {
+                backToTopContainer.style.opacity = '0';
+                backToTopContainer.style.pointerEvents = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

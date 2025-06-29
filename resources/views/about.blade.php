@@ -3,66 +3,46 @@
 @section('navbar-color', 'navbar-about')
 
 @section('content')
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero__overlay">
-        <h1 class="hero__title">About Broil</h1>
-        <p class="hero__subtitle">Our Story, Our Passion, Our Commitment</p>
-    </div>
-</section>
+    <!-- About Content -->
+    <section class="py-5 bg-orange about-bg" style="top: 55px">
+        <div class="container-fluid">
+            <!-- Centered Smile Face (if needed) -->
 
-<!-- About Content -->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Story Section -->
-                <div class="text-center mb-5">
-                    <h2 class="display-4 mb-3 text-dark">Our Story</h2>
-                    <p class="lead text-muted">
-                        Founded in 2020, Broil has been serving exceptional cuisine to our community with passion and dedication.
-                    </p>
+            <div class="d-flex flex-column justify-content-center ">
+                <div class="col-12 d-flex justify-content-center pb-5">
+                    <span class="smile-face"></span>
                 </div>
-                
-                <!-- Mission & Vision -->
-                <div class="row mb-5">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <h3 class="h4 mb-3 text-dark">Our Mission</h3>
-                        <p class="text-muted">
-                            To provide an unforgettable dining experience through innovative cuisine, 
-                            exceptional service, and a warm, welcoming atmosphere that makes every 
-                            guest feel like family.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <h3 class="h4 mb-3 text-dark">Our Vision</h3>
-                        <p class="text-muted">
-                            To become the premier destination for culinary excellence, known for 
-                            our commitment to quality, creativity, and customer satisfaction.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Values Section -->
-                <div class="bg-light rounded-3 p-5 text-center">
-                    <h3 class="h4 mb-4 text-dark">Our Values</h3>
-                    <div class="row">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <h4 class="h5 text-primary mb-2">Quality</h4>
-                            <p class="text-muted">We use only the finest ingredients</p>
+
+            <!-- Content Section -->
+            <div class="d-flex flex-column justify-content-start offset-1">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="about-content">
+                        <h1 class="about-title mb-4">WHO WE ARE</h1>
+
+                        <div class="about-intro mb-4">
+                            <p class="lead">WELCOME TO BROIL – FAST FOOD WITH FLAVOR AND HERITAGE</p>
                         </div>
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <h4 class="h5 text-primary mb-2">Innovation</h4>
-                            <p class="text-muted">Constantly evolving our menu</p>
+
+                        <div class="about-body">
+                            <p class="mb-4">AT BROIL, WE SERVE BOLD FLAVORS, FRESH INGREDIENTS, AND FAST SERVICE – ALL WRAPPED IN A CASUAL AND WELCOMING EXPERIENCE. WHETHER YOU'RE STOPPING BY FOR A QUICK SNACK OR A FULL MEAL, BROIL DELIVERS QUALITY YOU CAN TASTE IN EVERY BITE.</p>
+
+                            <p class="mb-4">WE'RE MORE THAN JUST A FAST FOOD RESTAURANT – WE'RE THE NEW GENERATION OF A TIME-HONORED TRADITION. BROIL IS PROUDLY OWNED AND OPERATED BY THE SAME TEAM BEHIND STATION, A BELOVED LOCAL SNACK SPOT THAT HAS BEEN SERVING CUSTOMERS WITH CARE AND PASSION SINCE 1979.</p>
+
+                            <p class="mb-4 fw-bold">FROM OUR CLASSIC ROOTS TO OUR MODERN MENU, EVERYTHING WE DO REFLECTS A COMMITMENT TO FLAVOR, CONSISTENCY, AND COMMUNITY.</p>
                         </div>
-                        <div class="col-md-4">
-                            <h4 class="h5 text-primary mb-2">Service</h4>
-                            <p class="text-muted">Exceeding expectations</p>
+
+                        <div class="contact-info mt-5">
+                            <p class="mb-1">For more info:</p>
+                            <p class="mb-1">
+                                <a href="tel:+963115122333" class="text-white">+963 11 5122 333</a>
+                            </p>
+                            <p>
+                                <a href="mailto:broilsyria@gmail.com" class="text-white">broilsyria@gmail.com</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-@endsection 
+    </section>
+@endsection

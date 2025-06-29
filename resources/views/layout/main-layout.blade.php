@@ -21,14 +21,8 @@
                 </a>
             </div>
 
-            <!-- Hamburger menu for mobile -->
-            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
             <!-- Collapsible Navigation Menu Centered -->
-            <div class="collapse navbar-collapse order-md-2 order-3" id="navbarNav">
+            <div class="collapse navbar-collapse order-md-2 order-2" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
@@ -47,6 +41,12 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Hamburger menu for mobile - moved to right -->
+            <button class="navbar-toggler order-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
 
@@ -56,54 +56,57 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black py-4">
-        <div class="d-flex flex-row ">
-            <div class="col-3  d-flex justify-content-center align-items-center ">
-                <div class="text-center">
-                    <p>
-                        <img src="{{ asset('images/logo-down.png') }}" alt="Broil Logo" class="img-fluid">
-                    </p>
-                    <p class="footer-broil-text mb-1">
-                        Call us: <a href="tel:+963115122333" class="text-white text-decoration-none">+963 11 5122 333</a>
-                    </p>
-                    <p class="footer-broil-text">broilsyria@gmail.com</p>
+    <footer class="bg-black pb-4">
+        <div class="container-fluid">
+            <img class="back-to-top-icon back-to-top" src="{{asset('images/back-to-top.svg')}}"  alt="">
+            <div class="row">
+                <!-- Logo and Contact Column -->
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                    <div class="text-center">
+                        <p>
+                            <img src="{{ asset('images/logo-down.png') }}" alt="Broil Logo" class="img-fluid">
+                        </p>
+                        <p class="footer-broil-text mb-1">
+                            Call us: <a href="tel:+963115122333" class="text-white text-decoration-none">+963 11 5122 333</a>
+                        </p>
+                        <p class="footer-broil-text">broilsyria@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Navigation and Social Column -->
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-row justify-content-center mb-3">
+                        <a class="back-to-top" style="text-decoration: none!important;">BACK TO THE TOP</a>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center mb-3">
+                        <p class="footer-broil-text me-4" style="font-size: 20px">Home</p>
+                        <p class="footer-broil-text me-4" style="font-size: 20px">Our Menu</p>
+                        <p class="footer-broil-text" style="font-size: 20px">Contact Us</p>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center align-items-center mb-3">
+                        <p class="bold-footer-text me-3">Instagram</p>
+                        <img src="{{ asset('images/Star.png') }}" alt="" class="mx-3">
+                        <p class="bold-footer-text ms-3">Facebook</p>
+                    </div>
+
+                    <div class="text-center">
+                        <a>
+                            <img src="{{ asset('images/p-chroma.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Address Column -->
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mt-4 mt-md-0">
+                    <div class="text-center">
+                        <p class="bold-footer-text">Visit us</p>
+                        <p class="footer-broil-text">Damascus / Syria </p>
+                        <p class="footer-broil-text"> Al Shaalan st </p>
+                        <p class="footer-broil-text"> Qassion Mall </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-4 offset-1">
-                <img class="back-to-top-icon" src="{{asset('images/back-to-top.svg')}}" alt="">
-                <div class="d-flex flex-row justify-content-center">
-                    <a class="back-to-top" style="text-decoration: none!important;">BACK TO THE TOP</a>
-                </div>
-                <div class="d-flex flex-row justify-content-between">
-                    <p class="footer-broil-text" style="font-size: 20px">Home</p>
-                    <p class="footer-broil-text" style="font-size: 20px; margin-left: 40px">Our Menu</p>
-                    <p class="footer-broil-text" style="font-size: 20px">Contact Us</p>
-                </div>
-
-                <div class="d-flex flex-row justify-content-between">
-                    <p class="bold-footer-text">Instagram</p>
-                    <img src="{{ asset('images/Star.png') }}" alt="">
-                    <p class="bold-footer-text">Facebook</p>
-                </div>
-
-                <div class="text-center">
-                    <a>
-                        <img src="{{ asset('images/p-chroma.png') }}" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-3 container-fluid d-flex justify-content-center align-items-center offset-1 ">
-                <div class="text-center">
-
-                    <p class="bold-footer-text">Visit us</p>
-                    <p class="footer-broil-text">Damascus / Syria </p>
-                    <p class="footer-broil-text"> Al Shaalan st </p>
-                    <p class="footer-broil-text"> Qassion Mall </p>
-                </div>
-
-            </div>
-                <!-- Left Column - Brand & Contact -->
-
         </div>
     </footer>
 </body>
