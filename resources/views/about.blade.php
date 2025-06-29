@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- About Content -->
-    <section class="py-5 bg-orange about-bg" style="top: 55px">
+    <section class="py-5 bg-orange about-bg" >
         <div class="container-fluid">
             <!-- Centered Smile Face (if needed) -->
 

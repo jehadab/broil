@@ -1,69 +1,54 @@
-﻿/* Menu Page Specific Styles */
-
-/* Hero Section */
-.hero {
-  position: relative;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('placeholder.jpg') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+﻿.menu-header {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 6rem 0;
 }
 
-.hero__overlay {
-  background: rgba(0,0,0,0.4);
-  color: var(--color-light);
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 0 1rem;
+.our {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 65px/112.5px Montserrat;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    /*font: normal normal normal 65px/112px Montserrat;*/
+    letter-spacing: 1.75px;
+    /*color: #FFFFFF;*/
+    text-transform: uppercase;
+    opacity: 1;
+
 }
 
-.hero__title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--unnamed-font-family-montserrat-black);
-  font-weight: 900;
+.menu{
+    font: var(--unnamed-font-style-normal) normal bold 72px/112.5px Montserrat;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    /*font: normal normal bold 72px/112px Montserrat;*/
+    letter-spacing: 1.94px;
+    /*color: #FFFFFF;*/
+    text-transform: uppercase;
+    opacity: 1;
 }
 
-.hero__subtitle {
-  font-size: 1.25rem;
-  font-family: var(--unnamed-font-family-montserrat-medium);
-  font-weight: 500;
+.display-4 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
 }
 
-/* Menu Content Styles */
-.navbar-menu {
-  /* Custom navbar styling for menu page if needed */
+.special-char {
+    position: relative;
+    font-style: italic;
 }
 
-/* Menu Cards Styling */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.divider {
+    width: 100px;
+    height: 3px;
+    background: #ff6b00; /* Orange accent */
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Menu Category Headings */
-.border-bottom.border-primary {
-  border-bottom-width: 3px !important;
-}
-
-/* Responsive styles for menu page */
-@media (max-width: 767px) {
-  .hero {
-    height: 40vh;
-  }
-
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__subtitle {
-    font-size: 1rem;
-  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 4rem;
+    }
+    .display-4 {
+        font-size: 1.8rem;
+    }
 }

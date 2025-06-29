@@ -123,8 +123,8 @@ html, body {
 
 /* 3. Main Content */
 .main-content {
-  margin-top: 50px; /* Account for fixed navbar */
-  min-height: calc(100vh - 76px - 100px); /* Viewport height minus navbar and footer */
+  margin-top: 40px; /* Account for fixed navbar */
+  min-height: calc(100vh - 76px ); /* Viewport height minus navbar and footer */
 }
 
 /* 4. Content Sections */
