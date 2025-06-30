@@ -56,9 +56,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black pb-4">
-        <div class="container-fluid">
-            <img class="back-to-top-icon back-to-top" src="{{asset('images/back-to-top.svg')}}"  alt="">
+    <footer class="bg-black pb-4 minimal">
+        <a href="#top" class="back-to-top-link">
+            <img class="back-to-top-icon" src="{{asset('images/back-to-top.svg')}}" alt="Back to top">
+        </a>
             <div class="row">
                 <!-- Logo and Contact Column -->
                 <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0">
@@ -75,19 +76,19 @@
 
                 <!-- Navigation and Social Column -->
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-                    <div class="d-flex flex-row justify-content-center mb-3">
+                    <div class="d-flex flex-row justify-content-center ">
                         <a class="back-to-top" style="text-decoration: none!important;">BACK TO THE TOP</a>
                     </div>
-                    <div class="d-flex flex-row justify-content-center mb-3">
-                        <p class="footer-broil-text me-4" style="font-size: 20px">Home</p>
-                        <p class="footer-broil-text me-4" style="font-size: 20px">Our Menu</p>
+                    <div class="d-flex flex-row justify-content-center align-items-center mb-3">
+                        <p class="footer-broil-text text-center me-4" style="font-size: 20px">Home</p>
+                        <p class="footer-broil-text text-center me-4" style="font-size: 20px">Our Menu</p>
                         <p class="footer-broil-text" style="font-size: 20px">Contact Us</p>
                     </div>
 
-                    <div class="d-flex flex-row justify-content-center align-items-center mb-3">
-                        <p class="bold-footer-text me-3">Instagram</p>
-                        <img src="{{ asset('images/Star.png') }}" alt="" class="mx-3">
-                        <p class="bold-footer-text ms-3">Facebook</p>
+                    <div class="d-flex flex-row  align-items-center ">
+                        <p class="bold-footer-text ">Instagram</p>
+                        <img src="{{ asset('images/Star.png') }}" style="height: 100px; width: 100px" alt="" class="mx-3">
+                        <p class="bold-footer-text ">Facebook</p>
                     </div>
 
                     <div class="text-center">
@@ -107,7 +108,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
 </body>
 </html>

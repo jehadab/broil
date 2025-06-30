@@ -49,33 +49,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Back to top functionality
-    const backToTopButton = document.querySelector('.back-to-top');
-    const backToTopContainer = document.querySelector('.back-to-top').parentElement;
-    
+    const backToTopButton = document.querySelectorAll('.back-to-top');
+    // const backToTopContainer = document.querySelector('.back-to-top').parentElement;
+
     if (backToTopButton) {
         // Initially hide the button
-        backToTopContainer.style.opacity = '0';
-        backToTopContainer.style.pointerEvents = 'none';
-        
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 300) {
-                backToTopContainer.style.opacity = '1';
-                backToTopContainer.style.pointerEvents = 'auto';
-            } else {
-                backToTopContainer.style.opacity = '0';
-                backToTopContainer.style.pointerEvents = 'none';
+        // backToTopContainer.style.opacity = '0';
+        // backToTopContainer.style.pointerEvents = 'none';
+        //
+        // // Show/hide button based on scroll position
+        // window.addEventListener('scroll', function() {
+        //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        //
+        //     if (scrollTop > 300) {
+        //         backToTopContainer.style.opacity = '1';
+        //         backToTopContainer.style.pointerEvents = 'auto';
+        //     } else {
+        //         backToTopContainer.style.opacity = '0';
+        //         backToTopContainer.style.pointerEvents = 'none';
+        //     }
+        // });
+
+        if (backToTopButton.length > 0) {
+            for (let i = 0; i < backToTopButton.length; i++) {
+                backToTopButton[i].addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
             }
-        });
-        
-        backToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        }
     }
 });
