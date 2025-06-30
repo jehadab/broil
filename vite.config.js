@@ -14,15 +14,14 @@ export default defineConfig({
     build: {
         rollupOptions: {
             // Put font files into a “fonts” folder under /build
-            output: {
-                assetFileNames: (assetInfo) => {
-                    const ext = assetInfo.name.split('.').pop();
-                    if (/(ttf|woff2?|eot|otf)$/.test(ext)) {
-                        return 'fonts/[name]-[hash][extname]';
-                    }
-                    return 'assets/[name]-[hash][extname]';
-                },
+            manifest: true,
+            rollupOptions: {
+                output: {
+                    entryFileNames: `assets/[name].[hash].js`,
+                    assetFileNames: `assets/[name].[hash].[ext]`
+                }
             },
+
         },
     },
     // Make sure Vite knows to treat .ttf/.woff as assets
