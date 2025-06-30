@@ -13,4 +13,10 @@ export default defineConfig({
     ],
     // Make sure Vite knows to treat .ttf/.woff as assets
     assetsInclude: ['**/*.ttf', '**/*.woff', '**/*.woff2', '**/*.otf'],
+    server: {
+        host: '0.0.0.0', // Listen on all network interfaces
+        hmr: {
+            host: 'broil.chromaccs.com' // Your actual domain
+        }
+    },
 });
