@@ -46,7 +46,7 @@
 }
 
 @font-face {
-    font-family: 'Erica One';
+    font-family: 'Erica-One';
     src: url('../fonts/Erica_One/EricaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -82,7 +82,7 @@
     --unnamed-character-spacing-0-68: 0.68px;
     --unnamed-line-spacing-101-36845397949219: 101.36845397949219px;
     --unnamed-line-spacing-29-57658576965332: 29.57658576965332px;
-    --unnamed-font-family-erica-one: Erica One;
+    --unnamed-font-family-erica-one: Erica-One;
     --unnamed-font-family-montserrat-light: Montserrat-Light;
     --unnamed-font-family-montserrat-extra-bold: Montserrat-ExtraBold;
 }
