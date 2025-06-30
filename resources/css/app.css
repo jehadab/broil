@@ -7,7 +7,7 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'Montserrat-Black';
-    src: url('../../public/fonts/Montserrat-Black.ttf') format('truetype');
+    src: url('/public/fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'Montserrat-Medium';
-    src: url('../../public/fonts/Montserrat-Medium.ttf') format('truetype');
+    src: url('/public/fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: 'Montserrat-Bold';
-    src: url('../../public/fonts/Montserrat-Bold.ttf') format('truetype');
+    src: url('/public/fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -31,7 +31,7 @@
 
 @font-face {
     font-family: 'Montserrat-Light';
-    src: url('../../public/fonts/Montserrat-Light.ttf') format('truetype');
+    src: url('/public/fonts/Montserrat-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -39,7 +39,7 @@
 
 @font-face {
     font-family: 'Montserrat-ExtraBold';
-    src: url('../../public/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+    src: url('/public/fonts/Montserrat-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -47,7 +47,7 @@
 
 @font-face {
     font-family: 'Erica-One';
-    src: url('../../public/fonts/EricaOne-Regular.ttf') format('truetype');
+    src: url('/public/fonts/EricaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
