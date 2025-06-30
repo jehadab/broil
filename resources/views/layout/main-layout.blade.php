@@ -1,43 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Welcome to Broil Restaurant—savor the best steaks & seafood in town.">
+    <!-- Open Graph (optional) -->
+    <meta property="og:title" content="Broil Restaurant">
+    <meta property="og:description" content="Savor the best steaks & seafood in town.">
+    <meta property="og:image" content="{{ asset('images/social-preview.jpg') }}">
+    <meta property="og:url" content="https://broil.chromaccs.com/">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <title>{{ config('app.name') }}</title>
+    <title>Broil Restaurant</title>
 
-    <!-- Preconnect to external domains -->
+    <!-- Performance hints -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
-    <!-- Favicon with fallbacks -->
-    <link rel="icon" href="{{ asset('images/icons/smile-face.png') }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ asset('images/icons/smile-face.png') }}">
+    <!-- Favicons -->
+    <link rel="icon"            href="{{ asset('images/icons/smile-face.png') }}" type="image/x-icon">
+    <link rel="shortcut icon"   href="{{ asset('images/icons/smile-face.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/icons/smile-face.png') }}">
 
-    <!-- CSS Assets -->
+    <!-- CSS/JS Bundles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-
-    <!-- Google Fonts with fallback -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Font Awesome -->
+    <link
+        rel="preload"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        as="style"
+        integrity="sha384-…"
+        crossorigin="anonymous"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </noscript>
 
-    <!-- Mobile-specific optimizations -->
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+        rel="stylesheet"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Theme color for Chrome on Android -->
     <meta name="theme-color" content="#ffffff">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md fixed-top @yield('navbar-color', 'navbar-default')">
