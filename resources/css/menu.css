@@ -1,7 +1,21 @@
 ﻿.menu-header {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 6rem 0;
+    /*padding: 6rem 0;*/
+}
+.face-img{
+    width: 7rem;
+    height: 7rem;
+    background-image: url('../images/face.svg');
+    background-size: contain;
+    transition: background-image 0.2s ease;
+    background-repeat: no-repeat;
+
+}
+.face-img:hover {
+    background-image: url('../images/face2.svg');
+    /*transition: background-image 0.3s ease;*/
+    background-size: contain;
 }
 
 .our {
@@ -10,6 +24,7 @@
     text-align: left;
     /*font: normal normal normal 65px/112px Montserrat;*/
     letter-spacing: 1.75px;
+    line-height: 26px;
     /*color: #FFFFFF;*/
     text-transform: uppercase;
     opacity: 1;
@@ -25,6 +40,46 @@
     /*color: #FFFFFF;*/
     text-transform: uppercase;
     opacity: 1;
+}
+.navbar-menu{
+    background-color: var(--color-primary);
+}
+.navbar-nav .nav-link-menu {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    text-decoration: none;
+    /*font: normal normal normal 20px/26px Montserrat;*/
+    letter-spacing: 0;
+    /*color: #FFFFFF;*/
+    transition: all 0.3s ease;
+    opacity: 1;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link-menu:hover,
+.navbar-nav .nav-link-menu.active {
+    /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;*/
+    /*text-align: left;*/
+    color: var(--bs-black);
+    font: normal normal normal 20px/26px Montserrat;
+    letter-spacing: 0;
+    opacity: 1;
+}
+
+.footer-menu{
+    background-color: var(--color-primary);
+}
+.footer-menu.minimal,
+.footer-menu.minimal p,
+.footer-menu.minimal a,
+.footer-menu.minimal .footer-broil-text,
+.footer-menu.minimal .bold-footer-text ,
+.footer-menu.minimal span {
+    color: white !important;
+}
+.footer-menu.minimal a:hover{
+    color: var(--unnamed-color-707070) !important;
 }
 
 .display-4 {

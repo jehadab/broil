@@ -132,7 +132,7 @@ html, body {
 /* 5. Layout Components */
 
 
-.footer-broil-text{
+.footer-broil-text-link{
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px Montserrat;
     color: var(--unnamed-color-707070);
     text-align: left;
@@ -141,9 +141,26 @@ html, body {
     /*color: #FFFFFF;*/
     opacity: 1;
 }
+.footer-broil-text-link{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px Montserrat;
+    color: var(--unnamed-color-707070);
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+.footer-broil-text-link:hover,
+.footer-broil-text-link:focus
+{
+    color: var(--unnamed-color-f77319)!important;
+    /*color: var(--color-light);*/
+    text-underline: none;
+    text-align: left;
+    text-decoration: none!important;
+    border-bottom: none !important;
+}
 .back-to-top{
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/90px Montserrat;
-    color: var(--unnamed-color-f77319);
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/60px Montserrat;
+    color: var(--unnamed-color-707070);
     text-align: left;
     text-decoration: none;
     opacity: 1;
@@ -156,27 +173,29 @@ html, body {
     /*opacity: 1;*/
     border-bottom: none !important;
     transition: all 0.3s ease;
+    text-underline: none;
     user-select: none;
 }
 .back-to-top:hover,
 .back-to-top:focus{
     /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/90px Montserrat;*/
-    /*color: var(--unnamed-color-f77319);*/
-    color: var(--color-light);
+    color: var(--unnamed-color-f77319);
+    /*color: var(--color-light);*/
+    text-underline: none;
     text-align: left;
     text-decoration: none;
     border-bottom: none !important;
     /*font: normal normal normal 15px/90px Montserrat;*/
-    letter-spacing: 0.41px;
+    /*letter-spacing: 0.5px;*/
     /*color: #FFFFFF;*/
     /*text-transform: uppercase;*/
     opacity: 1;
-    transform: translateY(-2px);
+    /*transform: tra;*/
 }
 
 .back-to-top-link {
     position: absolute;
-    bottom: 19rem;
+    bottom: 15rem;
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -291,11 +310,7 @@ html, body {
     padding: 2rem 1rem !important;
   }
 
-  .back-to-top-icon {
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+
 
   .footer-broil-text {
     font-size: 14px;
@@ -440,8 +455,13 @@ footer a:hover {
     letter-spacing: var(--unnamed-character-spacing-0-68);
     color: var(--unnamed-color-ffffff);
     text-align: left;
+    cursor: pointer;
     /*font: normal normal bold 25px/112px Montserrat;*/
     /*letter-spacing: 0.68px;*/
     /*color: #FFFFFF;*/
     opacity: 1;
+}
+.footer-broil-text {
+    font-size: 14px;
+    color: var(--unnamed-color-ffffff);
 }

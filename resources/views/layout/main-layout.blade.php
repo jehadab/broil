@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broil Restaurant</title>
+    <title>{{ config('app.name') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Font Awesome for icons -->
+    <link rel="icon" href="{{ asset('images/icons/smile-face.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top @yield('navbar-color', 'navbar-default')">
         <div class="container-fluid">
             <!-- Logo Centered -->
             <div class="d-flex justify-content-center align-items-center order-md-1 order-1 position-absolute">
@@ -25,17 +26,17 @@
             <div class="collapse navbar-collapse order-md-2 order-2" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+                        <a class="@yield('navbar-text-color', 'nav-link') {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
                             HOME
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
+                        <a class="@yield('navbar-text-color', 'nav-link') {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
                             ABOUT US
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">
+                        <a class="@yield('navbar-text-color', 'nav-link') {{ request()->routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">
                             MENU
                         </a>
                     </li>
@@ -56,58 +57,72 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black pb-4 minimal">
+    <footer class="@yield("footer-class" , "bg-black") pb-4 minimal">
         <a href="#top" class="back-to-top-link">
-            <img class="back-to-top-icon" src="{{asset('images/back-to-top.svg')}}" alt="Back to top">
+            <img class="back-to-top-icon" src="@yield('back-to-top',asset('images/icons/back-to-top.svg'))" alt="Back to top">
         </a>
-            <div class="row">
-                <!-- Logo and Contact Column -->
-                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0">
-                    <div class="text-center">
-                        <p>
-                            <img src="{{ asset('images/logo-down.png') }}" alt="Broil Logo" class="img-fluid">
-                        </p>
-                        <p class="footer-broil-text mb-1">
-                            Call us: <a href="tel:+963115122333" class="text-white text-decoration-none">+963 11 5122 333</a>
-                        </p>
-                        <p class="footer-broil-text">broilsyria@gmail.com</p>
-                    </div>
-                </div>
-
-                <!-- Navigation and Social Column -->
-                <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-                    <div class="d-flex flex-row justify-content-center ">
-                        <a class="back-to-top" style="text-decoration: none!important;">BACK TO THE TOP</a>
-                    </div>
-                    <div class="d-flex flex-row justify-content-center align-items-center mb-3">
-                        <p class="footer-broil-text text-center me-4" style="font-size: 20px">Home</p>
-                        <p class="footer-broil-text text-center me-4" style="font-size: 20px">Our Menu</p>
-                        <p class="footer-broil-text" style="font-size: 20px">Contact Us</p>
-                    </div>
-
-                    <div class="d-flex flex-row  align-items-center ">
-                        <p class="bold-footer-text ">Instagram</p>
-                        <img src="{{ asset('images/Star.png') }}" style="height: 100px; width: 100px" alt="" class="mx-3">
-                        <p class="bold-footer-text ">Facebook</p>
-                    </div>
-
-                    <div class="text-center">
-                        <a>
-                            <img src="{{ asset('images/p-chroma.png') }}" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Address Column -->
-                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                    <div class="text-center">
-                        <p class="bold-footer-text">Visit us</p>
-                        <p class="footer-broil-text">Damascus / Syria </p>
-                        <p class="footer-broil-text"> Al Shaalan st </p>
-                        <p class="footer-broil-text"> Qassion Mall </p>
-                    </div>
+        <div class="row align-items-center">
+            <!-- Logo and Contact Column -->
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                <div class="text-center">
+                    <p>
+                        <img src="@yield('navbar-logo', asset('images/logo-down.png'))" alt="Broil Logo" class="img-fluid">
+                    </p>
+                    <p class="footer-broil-text mb-1">
+                        Call us: <a href="tel:+963115122333" class="text-white text-decoration-none">+963 11 5122 333</a>
+                    </p>
+                    <p class="footer-broil-text">broilsyria@gmail.com</p>
                 </div>
             </div>
+
+
+
+            <!-- Navigation and Social Column -->
+            <div class="col-12 col-md-6">
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Back to top -->
+                    <div class="mb-3">
+                        <span class="back-to-top">BACK TO THE TOP</span>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="d-flex justify-content-between w-75 align-items-center by-4">
+                        <a class="footer-broil-text-link text-decoration-none" href="{{ route('home') }}">Home</a>
+                        <a class="footer-broil-text-link text-decoration-none" style="padding-left: 2.5rem" href="{{ route('menu') }}">Our Menu</a>
+                        <a class="footer-broil-text-link text-decoration-none " href="{{ route('home') }}">Contact Us</a>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="d-flex justify-content-between align-items-center w-75 mb-4">
+                        <a  target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/broilrest?igsh=MXRkcmRnbnY0Y3hiZA=="
+                           class="bold-footer-text text-white text-decoration-none">Instagram</a>
+                        <a target="_blank" rel="noopener noreferrer"
+                           href="https://www.instagram.com/chroma.ccs?igsh=MWJ0cmNlZ3doMGhucQ==" >
+                            <img src="{{ asset('images/Star.png') }}" class="mx-3" style="height: 60px; width: 60px" alt="Divider">
+
+                        </a>
+                        <a class="bold-footer-text text-white text-decoration-none">Facebook</a>
+                    </div>
+
+                    <!-- Bottom Logo -->
+                    <a target="_blank" rel="noopener noreferrer"
+                       href="https://www.instagram.com/chroma.ccs?igsh=MWJ0cmNlZ3doMGhucQ==">
+                        <img src="{{ asset('images/p-chroma.png') }}" class="img-fluid" alt="Partner Logo">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Address Column -->
+            <div class="col-12 col-md-3 d-flex mt-4 mt-md-0 justify-content-center align-items-center">
+                <div class="text-center">
+                    <h6 class="bold-footer-text text-white mb-3">Visit us</h6>
+                    <p class="footer-broil-text mb-1">Damascus / Syria</p>
+                    <p class="footer-broil-text mb-1">Al Shaalan st</p>
+                    <p class="footer-broil-text mb-0">Qassion Mall</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
+

@@ -1,10 +1,10 @@
 @extends('layout.main-layout')
 
-@section('navbar-color', 'navbar-about')
+{{--@section('navbar-color', 'navbar-about')--}}
 
 @section('content')
     <!-- About Content -->
-    <section class=" py-4 bg-orange about-bg " style="min-height: 1600px height: calc(100vh - 65px) ">
+    <section class=" py-4 bg-orange about-bg " style="min-height: 1600px; height: calc(100vh - 65px) ">
         <div class="container-fluid ">
             <!-- Centered Smile Face (if needed) -->
 
