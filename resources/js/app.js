@@ -2,21 +2,21 @@ import './bootstrap';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Bootstrap Carousel Initialization
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (typeof bootstrap !== 'undefined') {
         // console.error('Bootstrap not loaded!');
 
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(carousel => {
-        new bootstrap.Carousel(carousel, {
-            interval: 3000,
-            wrap: true,
-            keyboard: true,
-            pause: 'hover',
-            touch: true // Enable touch/swipe on mobile
+        const carousels = document.querySelectorAll('.carousel');
+        carousels.forEach(carousel => {
+            new bootstrap.Carousel(carousel, {
+                interval: 3000,
+                wrap: true,
+                keyboard: true,
+                pause: 'hover',
+                touch: true // Enable touch/swipe on mobile
+            });
         });
-    });
-    console.log("hto")
+        console.log("hto")
     }
 
     // Navbar scroll behavior
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScrollTop = 0;
     // console.log("hto")
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         // console.log("hi" , scrollTop);
         // At the top of the page - always show navbar
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (backToTopButton.length > 0) {
             for (let i = 0; i < backToTopButton.length; i++) {
-                backToTopButton[i].addEventListener('click', function(e) {
+                backToTopButton[i].addEventListener('click', function (e) {
                     e.preventDefault();
                     window.scrollTo({
                         top: 0,
@@ -82,4 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
 });
+    document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.mobile-slider');
+    const track  = document.querySelector('.mobile-slider__track');
+    const items  = track.querySelectorAll('.mobile-slider__item');
+    const middleIndex = Math.floor(items.length / 2);
+    const middleItem  = items[middleIndex];
+
+    // Center the middle item:
+    const itemCenter = middleItem.offsetLeft + middleItem.clientWidth / 2;
+    const sliderCenter = slider.clientWidth / 2;
+    slider.scrollLeft = itemCenter - sliderCenter;
+});
+
+// Wait for everything (images, fonts, etc.) to finish loading
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    // Add class to fade it out
+    preloader.classList.add('loaded');
+    // Remove it from the DOM after transition finishes
+    preloader.addEventListener('transitionend', () => {
+        preloader.remove();
+    });
+});
+
+

@@ -68,6 +68,7 @@
     /* Colors: */
     --unnamed-color-707070: #707070;
     --unnamed-color-f77319: #F77319;
+    --orange2 : #F47421;
     --unnamed-color-ffffff: #FFFFFF;
 
     /* Font/text values */
@@ -116,6 +117,17 @@
     line-height: var(--unnamed-line-spacing-101-36845397949219);
     letter-spacing: var(--unnamed-character-spacing-2-04);
     color: var(--unnamed-color-ffffff);
+}
+
+.orange2-text {
+    color: var(--orange2);
+}
+
+@media(max-width: 768px) {
+.hide-small-screen{
+    display: none!important;
+}
+
 }
 
 /*.row > * {*/

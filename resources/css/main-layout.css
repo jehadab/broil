@@ -1,73 +1,85 @@
 /* 1. Global Reset & Variables */
 html, body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --color-primary: #F47421; /* example orange */
-  --color-dark: #111;
-  --color-dark2: #0C0D0E;
-  --color-light: #fff;
-  --color-gray: #707070;
-  --gap: 1rem;
-  --max-width: 1200px;
-  --bp-md: 768px;
-  --bp-lg: 1024px;
-  font-family: 'Montserrat', Arial, sans-serif;
+    --color-primary: #F47421; /* example orange */
+    --color-dark: #111;
+    --color-dark2: #0C0D0E;
+    --color-light: #fff;
+    --color-gray: #707070;
+    --gap: 1rem;
+    --max-width: 1200px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 /* 2. Bootstrap Overrides */
 .navbar {
-  padding: 0.5rem 0;
-  background-color: var(--color-dark2);
-  min-height: 63px;
-  /* UI Properties */
-  /*background: #0C0D0E 0% 0% no-repeat padding-box;*/
-  /*border: 1px solid #F47421;*/
-  opacity: 1;
-  transition: transform 0.3s ease;
+    padding: 0.5rem 0;
+    background-color: var(--color-dark2);
+    min-height: 65px;
+    /* UI Properties */
+    /*background: #0C0D0E 0% 0% no-repeat padding-box;*/
+    /*border: 1px solid #F47421;*/
+    opacity: 1;
+    transition: transform 0.3s ease;
 }
+/* Smile face in nav */
+.nav-smile {
+    display: flex;
+    width: 20px!important;
+    height: 20px!important;
+    background: url('../images/smile-face.png') center/contain no-repeat;
+    transition: transform .2s ease;
+}
+.nav-smile:hover {
+    transform: scale(1.1);
+}
+
 
 /* Classes for navbar scroll behavior */
 .navbar-hidden {
-  transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .navbar-visible {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .navbar-brand.logo-brand {
-  position: relative;
-  /*left: -140px;*/
-  margin-right: 0;
-  padding: 0;
+    position: relative;
+    /*left: -140px;*/
+    margin-right: 0;
+    padding: 0;
 }
 
 .logo-image {
-  height: 40px;
-  width: auto;
-  max-width: 200px;
+    height: 40px;
+    width: auto;
+    max-width: 200px;
 }
 
 .navbar-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .navbar-nav .nav-item {
-  position: relative;
+    position: relative;
 }
 
 .navbar-nav .nav-link {
@@ -94,36 +106,36 @@ html, body {
 
 /* Navbar toggler styling */
 .navbar-toggler {
-  /*border-color: var(--color-primary);*/
-  padding: 0.2rem 0.4rem;
-  margin-right: 0.5rem;
-  margin-left: auto;
-  order: 3;
+    /*border-color: var(--color-primary);*/
+    padding: 0.2rem 0.4rem;
+    margin-right: 0.5rem;
+    margin-left: auto;
+    order: 3;
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.15rem var(--color-primary);
+    box-shadow: 0 0 0 0.15rem var(--color-primary);
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28244, 116, 33, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28244, 116, 33, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .home-icon {
     /*right: 200px;*/
-  margin-left: 0;
-  padding: 0;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+    margin-left: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .home-icon:hover {
-  color: var(--color-light) !important;
+    color: var(--color-light) !important;
 }
 
 /* 3. Main Content */
 .main-content {
-  margin-top: 62px; /* Account for fixed navbar */
+    margin-top: 65px; /* Account for fixed navbar */
     /*min-height: 100vh; !* Viewport height minus navbar and footer *!*/
 }
 
@@ -132,7 +144,7 @@ html, body {
 /* 5. Layout Components */
 
 
-.footer-broil-text-link{
+.footer-broil-text-link {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px Montserrat;
     color: var(--unnamed-color-707070);
     text-align: left;
@@ -141,24 +153,26 @@ html, body {
     /*color: #FFFFFF;*/
     opacity: 1;
 }
-.footer-broil-text-link{
+
+.footer-broil-text-link {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px Montserrat;
     color: var(--unnamed-color-707070);
     text-align: left;
     cursor: pointer;
     text-decoration: none;
 }
+
 .footer-broil-text-link:hover,
-.footer-broil-text-link:focus
-{
-    color: var(--unnamed-color-f77319)!important;
+.footer-broil-text-link:focus {
+    color: var(--unnamed-color-f77319) !important;
     /*color: var(--color-light);*/
     text-underline: none;
     text-align: left;
-    text-decoration: none!important;
+    text-decoration: none !important;
     border-bottom: none !important;
 }
-.back-to-top{
+
+.back-to-top {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/60px Montserrat;
     color: var(--unnamed-color-707070);
     text-align: left;
@@ -176,8 +190,9 @@ html, body {
     text-underline: none;
     user-select: none;
 }
+
 .back-to-top:hover,
-.back-to-top:focus{
+.back-to-top:focus {
     /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 15px/90px Montserrat;*/
     color: var(--unnamed-color-f77319);
     /*color: var(--color-light);*/
@@ -205,138 +220,77 @@ html, body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .back-to-top-icon {
     width: 100%;
     height: 100%;
     transition: all 0.3s ease;
 }
+
 .back-to-top-icon:hover {
     transform: translateY(-5px);
 }
 
 /* 6. Responsive Breakpoints */
+/* ensure nav is tall enough on mobile for absolute children */
 @media (max-width: 767px) {
-  .navbar-brand.logo-brand {
-    left: 0;
-    margin-left: 1rem;
-  }
+    .navbar { padding: 0; }
+    .navbar .container-fluid { padding: 0; }
 
-  .logo-image {
-    height: 40px;
-  }
+    /* size of the navbar wrapper */
+    .navbar > .container-fluid > .position-relative {
+        height: 65px; /* match your navbar min-height */
+    }
 
-  .navbar-nav {
-    gap: 0;
-    align-items: flex-start;
-    padding: 1rem 0;
-    width: 100%;
-  }
+    /* smile-face */
+    .nav-smile {
+        width: 24px!important;
+        height: 24px!important;
+        background: url('../images/smile-face.png') center/contain no-repeat;
+        transition: transform .2s ease;
+    }
+    /*.nav-smile:hover {*/
+    /*    transform: scale(1.1);*/
+    /*}*/
 
-  .navbar-nav .nav-item {
-    width: 100%;
-    border-bottom: 1px solid rgba(244, 116, 33, 0.2);
-  }
+    /* logo on the left */
+    .navbar-brand {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand .logo-image {
+        height: 22px;
+    }
 
-  .navbar-nav .nav-item:last-child {
-    border-bottom: none;
-  }
+    /* toggler on the right */
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
 
-  .navbar-nav .nav-link {
-    padding: 1rem;
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link::after {
-    display: none;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .navbar-collapse {
-    background-color: var(--color-dark2);
-    border-top: 1px solid rgba(244, 116, 33, 0.3);
-    margin-top: 0.5rem;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-
-  .navbar-nav {
-    gap: 0;
-    align-items: flex-start;
-    padding: 0;
-    width: 100%;
-    margin: 0;
-  }
-
-  .navbar-nav .nav-item {
-    width: 100%;
-    border-bottom: 1px solid rgba(244, 116, 33, 0.2);
-    margin: 0;
-  }
-
-  .navbar-nav .nav-item:last-child {
-    border-bottom: none;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 1rem 1.5rem;
-    font-size: 18px;
-    width: 100%;
-    text-align: left;
-    color: var(--color-light);
-    transition: all 0.3s ease;
-    border-radius: 0;
-  }
-
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link.active {
-    /* background-color: rgba(244, 116, 33, 0.1); */
-    color: var(--color-primary);
-    padding-left: 2rem;
-  }
-
-  /* Mobile Footer Styles */
-  footer {
-    padding: 2rem 1rem !important;
-  }
-
-
-
-  .footer-broil-text {
-    font-size: 14px;
-  }
-
-  .bold-footer-text {
-    font-size: 16px;
-  }
+    /* collapsed menu styling */
+    #navbarNavMobile {
+        background: var(--color-dark2);
+        position: absolute;
+        top: 65px;
+        left: 0; right: 0;
+        z-index: 999;
+    }
+    #navbarNavMobile .nav-link {
+        color: var(--color-light);
+        padding: .75rem 1rem;
+    }
+    #navbarNavMobile .nav-link:hover,
+    #navbarNavMobile .nav-link.active {
+        color: var(--color-primary);
+    }
 }
 
+
 @media (min-width: 768px) and (max-width: 1023px) {
-  .navbar-brand.logo-brand {
-    left: -100px;
-  }
+    #navbarNavMobile { display: none !important; }
 
-  .logo-image {
-    height: 45px;
-  }
-
-  .navbar-nav {
-    gap: 1.5rem;
-  }
-
-  .navbar-collapse {
-    justify-content: center;
-  }
 }
 
 footer a:hover {
@@ -354,80 +308,37 @@ footer a:hover {
 }
 
 @media (min-width: 1024px) {
-  .navbar-brand.logo-brand {
-    left: 50px;
-  }
+    #navbarNavMobile { display: none !important; }
 
-  .logo-image {
-    height: 40px;
-  }
-
-  .navbar-collapse {
-    justify-content: center;
-  }
 }
 
-/* 7. Additional Responsive Utilities */
-@media (max-width: 480px) {
-  .navbar-brand.logo-brand {
-    left: 0;
-    margin-left: 0.5rem;
-  }
-
-  .logo-image {
-    height: 35px;
-  }
-
-  .navbar-nav {
-    gap: 0;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 0.8rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .home-icon {
-    font-size: 1.1rem;
-  }
-
-  .navbar-toggler {
-    padding: 0.2rem 0.4rem;
-    margin-right: 0.5rem;
-  }
-
-  .container-fluid {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
 
 /* 8. Smooth Scrolling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* 9. Focus States for Accessibility */
 .navbar-nav .nav-link:focus {
-  outline: none;
-  color: var(--color-primary);
+    outline: none;
+    color: var(--color-primary);
 }
 
 /* 10. Button Hover Effects */
 .btn-primary:hover {
-  background-color: #ea580c !important;
-  border-color: #ea580c !important;
-  transform: translateY(-2px);
+    background-color: #ea580c !important;
+    border-color: #ea580c !important;
+    transform: translateY(-2px);
 }
 
 .btn-dark:hover {
-  background-color: #374151 !important;
-  border-color: #374151 !important;
-  transform: translateY(-2px);
+    background-color: #374151 !important;
+    border-color: #374151 !important;
+    transform: translateY(-2px);
 }
 
 .btn {
-  transition: all 0.3s ease !important;
+    transition: all 0.3s ease !important;
 }
 
 footer {
@@ -447,10 +358,10 @@ footer a:hover {
 }
 
 .btn-outline-light:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.bold-footer-text{
+.bold-footer-text {
     font: var(--unnamed-font-style-normal) normal bold 25px Montserrat;
     letter-spacing: var(--unnamed-character-spacing-0-68);
     color: var(--unnamed-color-ffffff);
@@ -461,7 +372,85 @@ footer a:hover {
     /*color: #FFFFFF;*/
     opacity: 1;
 }
+
 .footer-broil-text {
     font-size: 14px;
     color: var(--unnamed-color-ffffff);
+}
+
+/* Preloader overlay */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #F47421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    animation: bg-toggle 2s infinite ease-in-out;
+
+}
+/* Two-image switcher container */
+.image-switcher {
+    position: relative;
+    width: 100px;    /* loader size */
+    height: 100px;
+    overflow: hidden;
+}
+
+/* Both images stacked */
+.switcher-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation-timing-function: ease-in-out;
+}
+
+/* image1: visible → fade/rotate out → hidden → rotate back */
+.img1 {
+    animation: switcher-out 2s infinite ease-in-out;
+}
+
+/* image2: hidden → rotate in/fade → visible → rotate back */
+.img2 {
+    animation: switcher-in 2s infinite ease-in-out;
+}
+
+@keyframes switcher-out {
+    /* Fully visible, no rotate */
+    0%, 25%   { opacity: 1; transform: rotate(0deg); }
+    /* Start fade & slight rotate */
+    35%       { opacity: 0.7; transform: rotate(5deg); }
+    /* Full fade & max rotate */
+    45%       { opacity: 0.5;   transform: rotate(15deg); }
+    /* Hold hidden & rotate back partway */
+    60%       { opacity: 0.2;   transform: rotate(5deg); }
+    /* Almost back & prepare for next cycle */
+    75%       { opacity: 0.1;   transform: rotate(2deg); }
+    /* Hidden and neutral */
+    100%      { opacity: 0;   transform: rotate(0deg); }
+}
+
+@keyframes switcher-in {
+    /* Hidden, neutral */
+    0%, 25%   { opacity: 0;   transform: rotate(0deg); }
+    /* Slight rotate in */
+    35%       { opacity: 0.3; transform: rotate(-5deg); }
+    /* Full fade-in & max inward rotate */
+    45%       { opacity: 0.5;   transform: rotate(-15deg); }
+    /* Hold visible & rotate back partway */
+    60%       { opacity: 0.8;   transform: rotate(-5deg); }
+    /* Almost back & prepare for next cycle */
+    75%       { opacity: 0.9;   transform: rotate(-2deg); }
+    /* Fully visible & neutral */
+    100%      { opacity: 1;   transform: rotate(0deg); }
+}
+
+/* When page is loaded, fade out the preloader */
+#preloader.loaded {
+    opacity: 0;
+    pointer-events: none;
 }

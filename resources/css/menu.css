@@ -1,109 +1,87 @@
 ﻿.menu-header {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    /*padding: 6rem 0;*/
+    background-color: #000;
+    color: #fff;
+    /* pad more on desktop, less on phone */
+    padding: 4rem 0;
 }
-.face-img{
+.face-img {
     width: 7rem;
     height: 7rem;
-    background-image: url('../images/face.svg');
-    background-size: contain;
-    transition: background-image 0.2s ease;
-    background-repeat: no-repeat;
-
+    background: url('../images/face.svg') center/contain no-repeat;
+    transition: background-image .2s ease, transform .2s ease;
 }
 .face-img:hover {
+    transform: scale(1.1);
     background-image: url('../images/face2.svg');
-    /*transition: background-image 0.3s ease;*/
-    background-size: contain;
 }
 
 .our {
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 65px/112.5px Montserrat;
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    /*font: normal normal normal 65px/112px Montserrat;*/
+    font-family: Montserrat, sans-serif;
+    font-size: 65px;
+    font-weight: normal;
+    line-height: 1.2;
     letter-spacing: 1.75px;
-    line-height: 26px;
-    /*color: #FFFFFF;*/
     text-transform: uppercase;
-    opacity: 1;
-
 }
-
-.menu{
-    font: var(--unnamed-font-style-normal) normal bold 72px/112.5px Montserrat;
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    /*font: normal normal bold 72px/112px Montserrat;*/
+.menu {
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 1.2;
     letter-spacing: 1.94px;
-    /*color: #FFFFFF;*/
     text-transform: uppercase;
-    opacity: 1;
-}
-.navbar-menu{
-    background-color: var(--color-primary);
-}
-.navbar-nav .nav-link-menu {
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    text-decoration: none;
-    /*font: normal normal normal 20px/26px Montserrat;*/
-    letter-spacing: 0;
-    /*color: #FFFFFF;*/
-    transition: all 0.3s ease;
-    opacity: 1;
-    padding: 0.5rem 1rem;
 }
 
-.navbar-nav .nav-link-menu:hover,
-.navbar-nav .nav-link-menu.active {
-    /*font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px/25.87px Montserrat;*/
-    /*text-align: left;*/
-    color: var(--bs-black);
-    font: normal normal normal 20px/26px Montserrat;
-    letter-spacing: 0;
-    opacity: 1;
-}
+/* make nav-links white on this section if you need them */
+.navbar-menu { background-color: var(--color-primary); }
+.navbar-nav .nav-link-menu { color: #fff; }
 
-.footer-menu{
-    background-color: var(--color-primary);
-}
-.footer-menu.minimal,
-.footer-menu.minimal p,
-.footer-menu.minimal a,
-.footer-menu.minimal .footer-broil-text,
-.footer-menu.minimal .bold-footer-text ,
-.footer-menu.minimal span {
-    color: white !important;
-}
-.footer-menu.minimal a:hover{
-    color: var(--unnamed-color-707070) !important;
-}
-
-.display-4 {
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem;
-}
-
-.special-char {
-    position: relative;
-    font-style: italic;
-}
-
-.divider {
-    width: 100px;
-    height: 3px;
-    background: #ff6b00; /* Orange accent */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .display-1 {
-        font-size: 4rem;
+/* ============================= */
+/* RESPONSIVE TWEAKS             */
+/* ============================= */
+@media (max-width: 992px) {
+    .menu-header {
+        padding: 3rem 0;
     }
-    .display-4 {
-        font-size: 1.8rem;
+    .our {
+        font-size: 48px;
+        letter-spacing: 1px;
     }
+    .menu {
+        font-size: 48px;
+        letter-spacing: 1px;
+    }
+    .face-img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-header {
+        padding: 2rem 0;
+    }
+    .our {
+        font-size: 2rem;
+    }
+    .menu {
+        font-size: 2rem;
+    }
+    .face-img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .our {
+        font-size: 2rem;
+    }
+    .menu {
+        font-size: 2rem;
+    }
+}
+
+.menu-image {
 }

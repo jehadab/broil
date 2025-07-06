@@ -9,83 +9,52 @@
 
 
 @section('content')
+    <section class="menu-header">
+        <div class="container-fluid px-3 px-md-5">
+            <div class="row justify-content-center align-items-center"
+                 style="min-height: calc(100vh - 120px);">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
 
-    <!-- Menu Categories -->
-    <section class="menu-header " >
-        <div class="container-fluid" style="padding: 100px">
-            <div class="row justify-content-center" >
-                <div class="col-md-10 col-lg-8 text-center" style="min-height: calc(100vh - 100px)">
-
-                    <!-- Main Heading -->
-                    <div class="d-flex flex-column justify-content-center " >
-                        <div class="col-12 d-flex justify-content-center align-items-start  gap-4 ">
-                            <div class="flex-row">
-                                {{--                            <div class="flex-column">--}}
-                                <h2 class="our">OUR <br><span class="menu">MENU</span></h2>
-                                <h2 class="menu"></h2>
-                            </div>
-                            {{--                            </div>--}}
-                            {{--                            <div class="flex-column">--}}
-                            <span class="face-img"></span>
-
-                            {{--                            </div>--}}
-                        </div>
+                    {{-- Heading + face icon --}}
+                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
+                        <h2 class="our mb-0">
+                            OUR<br>
+                            <span class="menu">MENU</span>
+                        </h2>
+                        <span class="face-img"></span>
                     </div>
 
-                    <!-- Subheading -->
-                    <div class="d-flex col-12 align-items-start justify-content-center mb-5">
-                        <img src="{{ asset('images/menu/lets.svg') }}" style="width: 53rem;" alt="image">
+                    {{-- subheads --}}
+                    <div class="mb-5">
+                        <img src="{{ asset('images/menu/lets.svg') }}" class="img-fluid mx-auto d-block" style="max-width:24rem;" alt="">
                     </div>
-                    <div class="d-flex col-12 align-items-start justify-content-center">
-
-                        <img src="{{ asset('images/menu/lines.svg') }}" style="width: 25rem;height: 25rem" alt="image">
-
+                    <div class="mb-5">
+                        <img src="{{ asset('images/menu/lines.svg') }}" class="img-fluid mx-auto d-block" style="max-width:25rem;" alt="">
                     </div>
-                    <!-- Decorative Line -->
-                    {{--                <div class="divider mx-auto my-4"></div>--}}
 
                 </div>
             </div>
 
-            <div class="d-flex flex-column gap-5">
-
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/beef-burger.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/grilled-beef.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/chicken-burger.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/grilled-chicken.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/chicken-sandwich.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-
-                <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/beef-meals.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-            <div class="d-flex align-items-start justify-content-center">
-
-                    <img src="{{ asset('images/menu/menus/Appetizers.png') }}" style="width: 100%;height: 100%"
-                         alt="image">
-                </div>
-        </div>
+            {{-- Gallery --}}
+            <div class="row gx-0 gy-4 justify-content-center">
+                @foreach ([
+                  'beef-burger.png',
+                  'grilled-beef.png',
+                  'chicken-burger.png',
+                  'grilled-chicken.png',
+                  'chicken-sandwich.png',
+                  'beef-meals.png',
+                  'Appetizers.png'
+                ] as $img)
+                    <div class="col-12 col-sm-10 col-md-10 col-lg-10">
+                        <img
+                            src="{{ asset('images/menu/menus/'.$img) }}"
+                            class="img-fluid rounded"
+                            alt=""
+                        >
+                    </div>
+                @endforeach
+            </div>
         </div>
     </section>
 @endsection
