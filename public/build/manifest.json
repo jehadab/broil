@@ -1,0 +1,61 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Pr8xbHJX.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/fonts/Erica_One/EricaOne-Regular.ttf": {
+    "file": "assets/EricaOne-Regular-DwQoz-8h.ttf",
+    "src": "resources/fonts/Erica_One/EricaOne-Regular.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Black.ttf": {
+    "file": "assets/Montserrat-Black-BS-yoS0_.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Black.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Bold.ttf": {
+    "file": "assets/Montserrat-Bold-BSrD1I5P.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Bold.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-ExtraBold.ttf": {
+    "file": "assets/Montserrat-ExtraBold-DnlpJ974.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-ExtraBold.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Light.ttf": {
+    "file": "assets/Montserrat-Light-Cbfxly1I.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Light.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Medium.ttf": {
+    "file": "assets/Montserrat-Medium-CpRznguy.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Medium.ttf"
+  },
+  "resources/images/about-background-star.png": {
+    "file": "assets/about-background-star-C_eJonI9.png",
+    "src": "resources/images/about-background-star.png"
+  },
+  "resources/images/broilBranch.png": {
+    "file": "assets/broilBranch-DCafU9Q-.png",
+    "src": "resources/images/broilBranch.png"
+  },
+  "resources/images/face.svg": {
+    "file": "assets/face-DZScnGG9.svg",
+    "src": "resources/images/face.svg"
+  },
+  "resources/images/face2.svg": {
+    "file": "assets/face2-D_-TiVsr.svg",
+    "src": "resources/images/face2.svg"
+  },
+  "resources/images/smile-face.png": {
+    "file": "assets/smile-face-CuAyqe8S.png",
+    "src": "resources/images/smile-face.png"
+  },
+  "resources/images/smile-face2.svg": {
+    "file": "assets/smile-face2-BlEIHtxW.svg",
+    "src": "resources/images/smile-face2.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CS5LsIIT.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
