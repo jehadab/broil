@@ -1,47 +1,78 @@
-﻿/* 1. Section container */
+﻿
+.container-fluid { padding-left:6rem!important; padding-right:6rem!important; }
+@media (min-width:768px){
+    .container-fluid { padding-left:3rem; padding-right:3rem; }
+}
+/* 1) orange fill */
 .about-section {
-    position: relative;
     background-color: #F47421;
     overflow: hidden;
-    min-height: 100vh;             /* full viewport height */
+    min-height: 100vh;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-/* 2. Your text lives above everything */
-.about-content-wrapper {
-    position: relative;
+/* 2) empty full-size layer for solid orange */
+.about-bg {
+    z-index: 0;
+}
+
+/* 3) photo layer: sits on top of the orange, behind the text */
+.about-photo-layer {
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;          /* tweak this % to expose more or less of the photo */
+    height: 100%;
+    background: url('../images/about-background-star.png') no-repeat center/cover;
+    /* clip an ellipse: wide enough to show just the right-hand curve */
+    clip-path: ellipse(70% 100% at 100% 100%);
+    filter: drop-shadow(-10px 0 15px rgba(0,0,0,0.3));
+
+}
+
+/* 4) make sure your text sits above both layers */
+.about-section .position-relative {
     z-index: 2;
 }
 
-/* 3. Photo layer underneath the orange panel */
-.about-photo-layer {
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 70%;                     /* tweak to control how much photo peeks out */
-    height: 100%;
-    background: url('../images/about-background-star.png') center/cover no-repeat;
-    /* Clip an ellipse: 70% wide & 100% tall, anchored at bottom-right */
-    clip-path: ellipse(70% 100% at 100% 100%);
-    z-index: 1;
-}
-
-/* 4. Optional: if you want a slight drop-shadow on the edge */
-.about-photo-layer {
-    filter: drop-shadow(-10px 0 15px rgba(0,0,0,0.3));
-}
-
-/* 5. Smile‐face & type as before… */
+/* 5) hide the smile on xs (you already have this) */
 .smile-face {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     background: url('../images/smile-face.png') center/contain no-repeat;
-    transition: transform .2s;
 }
-.smile-face:hover {
-    transform: scale(1.1);
+.smile-face:hover,
+.smile-face:focus{
+    /*transform: scale(1.1);*/
     background-image: url('../images/smile-face2.svg');
 }
 
-/* 6. Typography & responsive scaling (as before) */
-.about-title { font-size: 3.5rem; /*…*/ }
-.about-intro.lead { font-size: 1.2rem; /*…*/ }
-/* etc… your existing media-queries */
+/* 6) typography as you already had */
+.about-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
+
+.about-intro.lead {
+    color: var(--unnamed-color-ffffff);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.bolder-text{
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .about-title { font-size: 3rem; }
+    .about-intro.lead { font-size: 1.1rem; }
+}
+
+@media (max-width: 575px) {
+    .about-title { font-size: 2.4rem; }
+    .about-intro.lead { font-size: 1rem; }
+    .about-body p { font-size: 0.9rem; }
+}
