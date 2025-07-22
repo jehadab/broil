@@ -1,41 +1,4 @@
-﻿/* Home Page Specific Styles */
-
-/* Hero Section (commented out in home.blade.php but kept for reference) */
-/*.hero {*/
-/*  position: relative;*/
-/*  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('placeholder.jpg') center/cover no-repeat;*/
-/*  height: 60vh;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  text-align: center;*/
-/*}*/
-
-/*.hero__overlay {*/
-/*  background: rgba(0,0,0,0.4);*/
-/*  color: var(--color-light);*/
-/*  padding: 2rem;*/
-/*  border-radius: 10px;*/
-/*  max-width: 600px;*/
-/*  margin: 0 1rem;*/
-/*}*/
-
-/*.hero__title {*/
-/*  font-size: 2.5rem;*/
-/*  margin-bottom: 0.5rem;*/
-/*  font-family: var(--unnamed-font-family-montserrat-black);*/
-/*  font-weight: 900;*/
-/*}*/
-
-/*.hero__subtitle {*/
-/*  font-size: 1.25rem;*/
-/*  font-family: var(--unnamed-font-family-montserrat-medium);*/
-/*  font-weight: 500;*/
-/*}*/
-
-
-/* Bootstrap Carousel Customization */
-.image-slider {
+﻿.image-slider {
     border: 1px solid var(--unnamed-color-707070);
     background: #F47421 0 0 no-repeat padding-box;
     /*border: 1px solid #707070;*/
@@ -609,51 +572,6 @@
     }
 }
 
-/*!* Original Desktop Carousel Styles (commented out) *!*/
-/*@media (min-width: 1024px) {*/
-/*  .carousel-item {*/
-/*    height: 80vh;*/
-/*  }*/
-
-/*  .slide-title {*/
-/*      font-family: var(--unnamed-font-family-erica-one), sans-serif;*/
-/*      font-size: 79px;*/
-/*      color: var(--unnamed-color-ffffff);*/
-/*      text-align: center;*/
-/*      letter-spacing: 0;*/
-/*      line-height: 69px;*/
-
-/*  }*/
-
-/*  .carousel-caption {*/
-/*      font-family: var(--unnamed-font-family-montserrat-light), sans-serif;*/
-/*      font-size: 31px;*/
-/*      color: var(--unnamed-color-ffffff);*/
-/*      text-align: center;*/
-/*      letter-spacing: 0.84px;*/
-/*      line-height: 35px;*/
-/*  }*/
-/*    .top-sell-img{*/
-/*        height: 305px;*/
-/*        width: 305px;*/
-/*        position: relative;*/
-/*        !*scale: 1.8;*!*/
-/*        z-index: 100;*/
-/*        transition: transform 0.3s ease, box-shadow 0.3s ease;*/
-/*    }*/
-/*    .top-sell-img:hover {*/
-/*        position: relative;*/
-/*        !*scale: 1.5;*!*/
-/*        z-index: 100;*/
-/*        transform: translateY(-5px);*/
-/*    }*/
-
-/*    .top-sell-container{*/
-/*        margin: 0 1rem;*/
-/*        !*padding-left: 1.05rem;*!*/
-/*        !*padding-right: 1.05rem;*!*/
-/*    }*/
-/*}*/
 
 /* Carousel Touch/Swipe Support */
 .carousel {
