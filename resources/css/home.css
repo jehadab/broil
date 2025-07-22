@@ -2,7 +2,7 @@
     border: 1px solid var(--unnamed-color-707070);
     background: #F47421 0 0 no-repeat padding-box;
     /*border: 1px solid #707070;*/
-    margin-top: 63px;
+    /*margin-top: 63px;*/
     z-index: 100;
     opacity: 1;
 }
@@ -151,6 +151,20 @@
     /*display: block;*/
     /*margin: 0 auto;*/
     /*object-fit: cover;*/
+}
+.top-selling-text {
+
+    color: var(--unnamed-color-ffffff)!important;
+    font: var(--unnamed-font-family-montserrat-extra-bold);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 0.76;
+
+
+
+
+
 }
 
 .top-sell-img:hover {
@@ -378,49 +392,75 @@
         position: absolute;
     }
 
-    /* ------------------------------ */
-    /*  Mobile slider wrapper         */
-    /* ------------------------------ */
+    /* ------------------------------------
+       1. Break the slider out of its container
+       ------------------------------------ */
     .mobile-slider {
-        overflow-x: auto;               /* enable horizontal scroll */
+        display: flex;
+        /* ↓ smaller gap between slides ↓ */
+        gap: 0.5rem;
+
+        /* full-bleed breakout */
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+
+        overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;   /* snap to each item */
-        padding: 1rem 0;                 /* vertical breathing room */
+
+        /* snap to center, not to start */
+        scroll-snap-type: x mandatory;
+        /* allow the first/last to center correctly */
+        scroll-padding: 0 50vw;
+        padding: 1rem 0;
+        overscroll-behavior-y: none;
+        /* Firefox */
+        scrollbar-width: none;
+        /* IE 10+ */
+        -ms-overflow-style: none;
     }
+
+    /* WebKit browsers */
     .mobile-slider::-webkit-scrollbar {
-        display: none;                   /* hide scrollbar */
+        display: none;
+
+
     }
 
-    /* track holds all items in a row */
-    .mobile-slider__track {
-        gap: 1rem;
-    }
-
-    /* each slide item */
     .mobile-slider__item {
-        flex: 0 0 auto;                 /* don’t shrink, width based on content */
-        scroll-snap-align: center;      /* snap to center of viewport */
-        width: 60%;                      /* adjust to taste: 60% means you’ll see edges of neighbors */
+        flex: 0 0 auto;
+        /* ↓ snap each slide to the center of the viewport ↓ */
+        scroll-snap-align: center;
+        /* keep full-viewport width—if you want a peek at neighbors,
+           change to e.g. width: 90vw and gap will show edges */
+        width: 55vw;
+
         position: relative;
-        scale: 1.25;
     }
 
-    /* ensure images fill their container */
+    .mobile-slider__item:first-child{
+        z-index: 10!important;
+    }
+
     .mobile-slider__item img {
-        width: 100%;
+        width: 120%;
         height: auto;
         display: block;
-        border-radius: 8px;              /* optional rounding */
+        border-radius: 0;
     }
     .top-selling-text {
-        font-family: var(--unnamed-font-family-montserrat-extra-bold), serif;
-        color: var(--unnamed-color-ffffff);
-        font-size: 20px;
-        letter-spacing: 1px;
-        line-height: 20px;
+
+        color: var(--unnamed-color-ffffff)!important;
+        font-size: 21px;
+        font-weight: 700;
+
 
     }
+
 
 }
 
@@ -523,7 +563,7 @@
 /* Desktop Carousel Styles */
 @media (min-width: 1024px) {
     #top-selling {
-        height: 800px;
+        height: 600px;
         /* display: flex; */
         /* flex-direction: column; */
         padding: 6rem 0;
@@ -567,8 +607,11 @@
     }
 
     .top-selling-text {
+
+        color: var(--unnamed-color-ffffff)!important;
         font-size: 31px;
         margin-bottom: 3rem;
+
     }
 }
 

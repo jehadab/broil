@@ -65,19 +65,18 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md fixed-top navbar-dark position-fixed">
+<nav class="navbar navbar-expand-md fixed-top position-fixed">
     <div class="container-fluid">
 
         {{-- MOBILE HEADER --}}
-        <div class="d-md-none position-relative w-100 d-flex justify-content-center align-items-center"
-             style="height:65px;">
+        <div class="d-md-none position-relative w-100 d-flex justify-content-center align-items-center">
             <!-- Centered: Smile face -->
             <span class="smile-face nav-smile"></span>
 
             <!-- Left: Logo -->
             <a
                 class="navbar-brand position-absolute start-0 ps-3"
-                href="{{ route('home') }}"
+                href="{{ route_or_hash('home') }}"
             >
                 <img src="{{ asset('images/logo.png') }}" class="logo-image" alt="Broil Logo">
             </a>
@@ -99,27 +98,45 @@
         {{-- MOBILE COLLAPSE --}}
         <div class="collapse navbar-collapse d-md-none" id="navbarNavMobile">
             <ul class="navbar-nav w-100 text-center bg-dark2">
-                <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">ABOUT US</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('menu') }}">MENU</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route_or_hash('home') }}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route_or_hash('about') }}">ABOUT US</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route_or_hash('menu') }}">MENU</a></li>
             </ul>
         </div>
 
-        {{-- DESKTOP HEADER (logo centered + desktop menu) --}}
-        <div class="d-none d-md-flex w-100 justify-content-center align-items-center position-relative">
-            <a class="navbar-brand mx-auto" href="{{ route('home') }}">
+        {{-- DESKTOP HEADER --}}
+        <div class="d-none d-md-flex w-100 position-relative align-items-center" style="height: 65px;">
+            {{-- Logo on left with margin --}}
+            <a href="{{ route_or_hash('home') }}"
+               class="navbar-brand ms-4">
                 <img src="{{ asset('images/logo.png') }}" alt="Broil Logo" class="logo-image">
             </a>
 
-            <div class="collapse navbar-collapse" id="navbarNavDesktop">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('menu') }}">MENU</a></li>
+            {{-- Menu absolutely centered --}}
+            <div class="collapse navbar-collapse position-absolute start-50 translate-middle-x"
+                 id="mainNav">
+                <ul class="navbar-nav align-content-center" >
+                    <li class="nav-item">
+                        <a class="nav-link nav-li px-3 {{ request()->routeIs('home') ? 'active' : '' }}"
+                           href="{{ route_or_hash('home') }}">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-li px-3 {{ request()->routeIs('about') ? 'active' : '' }}"
+                           href="{{ route_or_hash('about') }}">
+                            ABOUT US
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-li px-3 {{ request()->routeIs('menu') ? 'active' : '' }}"
+                           href="{{ route_or_hash('menu') }}">
+                            MENU
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-
     </div>
 </nav>
 
@@ -166,10 +183,10 @@
 
                 <!-- Navigation Links -->
                 <div class="d-flex justify-content-between w-75 align-items-center by-4">
-                    <a class="footer-broil-text-link text-decoration-none" href="{{ route('home') }}">Home</a>
+                    <a class="footer-broil-text-link text-decoration-none" href="{{ route_or_hash('home') }}">Home</a>
                     <a class="footer-broil-text-link text-decoration-none" style="padding-left: 2.5rem"
-                       href="{{ route('menu') }}">Our Menu</a>
-                    <a class="footer-broil-text-link text-decoration-none " href="{{ route('home') }}">Contact Us</a>
+                       href="{{ route_or_hash('menu') }}">Our Menu</a>
+                    <a class="footer-broil-text-link text-decoration-none " href="{{ route_or_hash('about') }}">Contact Us</a>
                 </div>
 
                 <!-- Social Media -->

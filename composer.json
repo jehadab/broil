@@ -21,6 +21,7 @@
         "pestphp/pest-plugin-laravel": "^3.2"
     },
     "autoload": {
+        "files": ["app/helpers/route_or_hash.php"],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",

@@ -84,17 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-    document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const slider = document.querySelector('.mobile-slider');
-    const track  = document.querySelector('.mobile-slider__track');
-    const items  = track.querySelectorAll('.mobile-slider__item');
-    const middleIndex = Math.floor(items.length / 2);
-    const middleItem  = items[middleIndex];
-
-    // Center the middle item:
-    const itemCenter = middleItem.offsetLeft + middleItem.clientWidth / 2;
-    const sliderCenter = slider.clientWidth / 2;
-    slider.scrollLeft = itemCenter - sliderCenter;
+    const items  = slider.querySelectorAll('.mobile-slider__item');
+    if (!slider || items.length === 0) return;
+    // pick the middle item
+    const mid = items[Math.floor(items.length / 2)];
+    mid.scrollIntoView({ inline: 'center' });
 });
 
 // Wait for everything (images, fonts, etc.) to finish loading

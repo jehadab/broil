@@ -11,7 +11,7 @@
 
     <!-- Featured Section -->
     <section class="image-slider">
-        <div class="container-fluid px-0  ">
+        <div class="col-12 px-0 ">
             <div class="row hide-small-screen">
                 <div class="col-12 d-flex justify-content-center align-items-center py-4">
                     <span class="smile-face">
@@ -109,8 +109,8 @@
     <section id="top-selling" class="bg-orange">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 text-center pb-5">
-                    <h2 class="top-selling-text ">TOP SELLING ITEMS</h2>
+                <div class="col-12 text-center pb-md-5">
+                    <p class="top-selling-text ">TOP SELLING ITEMS</p>
                 </div>
             </div>
 
